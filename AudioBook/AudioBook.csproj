@@ -75,7 +75,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ClassHelp\CartClass.cs" />
+    <Compile Include="ClassHelp\BookModel.cs" />
     <Compile Include="ClassHelp\EFClass.cs" />
     <Compile Include="ClassHelp\ListToStringConverter.cs" />
     <Compile Include="ClassHelp\NavigateClass.cs" />

@@ -1,4 +1,6 @@
-﻿using Microsoft.Win32;
+﻿using AudioBook.ClassHelp;
+using AudioBook.DB;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +39,20 @@ namespace AudioBook.Win
             timer.Tick += timer_Tick;
             timer.Start();
         }
+
+        public WindowBook(BookModel bookModel)
+        {
+            InitializeComponent();
+            
+            string uriString = "C:\\Users\\maxze\\Documents\\AudioBook\\AudioBook\\Way\\Рубрика.mp3";
+            mediaPlayer.Open(new Uri(uriString));
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += timer_Tick;
+            timer.Start();
+        }
+
         void timer_Tick(object sender, EventArgs e)
 		{
 			if(mediaPlayer.Source != null)

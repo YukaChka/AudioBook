@@ -158,39 +158,44 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <!-- Шаблон одного элемета -->
-
-                        <Border CornerRadius="20" Background="White"
+                        <Button BorderBrush="Transparent" x:Name="btn_Book" Click="btn_Book_Click"  Tag="{Binding id}">
+                            <Border 
+                            CornerRadius="20" 
+                            Background="White"
+                                 
                             BorderThickness="2"
                             Width="1340"
                             Height="100"
                             Margin="5, 5, 5, 5">
-                            
 
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="1*"/>
-                                    <ColumnDefinition Width="1*"/>
-                                    <ColumnDefinition Width="5*"/>
-                                </Grid.ColumnDefinitions>
 
-                                <Image Grid.Column="0"  Height="100" Width="100" Source="/no.png"/>
-                                <StackPanel Grid.Column="1">
-                                    <TextBlock Text="{Binding nameBook}"
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="5*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Grid.Column="0"  Height="100" Width="100" Source="/no.png"/>
+                                    <StackPanel Grid.Column="1">
+                                        <TextBlock Text="{Binding nameBook}"
                                        Margin="5,0,0,0" Grid.ColumnSpan="2" FontSize="18"/>
-                                    <TextBlock Text="{Binding AuthorFIO, StringFormat='Автор {0}'}"
+                                        <TextBlock Text="{Binding AuthorFIO, StringFormat='Автор {0}'}"
                                        
                                        Margin="5,0,0,0" Grid.ColumnSpan="2"/>
-                                    <TextBlock Text="{Binding genre , StringFormat='Чтец {0}'}"
+                                        <TextBlock Text="{Binding genre , StringFormat='Чтец {0}'}"
                                        Margin="5,0,0,0" Grid.ColumnSpan="2"/>
 
-                                </StackPanel>
-                                
-                                 <TextBlock TextWrapping="Wrap" Grid.Column="2" Margin="0,0,50,0" Text="{Binding titleBook}"/>
-                                
-                                
+                                    </StackPanel>
 
-                            </Grid>
-                        </Border>
+                                    <TextBlock TextWrapping="Wrap" Grid.Column="2" Margin="0,0,50,0" Text="{Binding titleBook}"/>
+
+
+
+                                </Grid>
+                            </Border>
+                        </Button>
+                        
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
