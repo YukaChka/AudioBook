@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="12ff660e537c42eb86ee2ad3cfbe34d8" Name="Diagram1">
+        <EntityTypeShape EntityType="AbookModel.Author" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AbookModel.AuthorBooks" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="AbookModel.Book" Width="1.5" PointX="6" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AbookModel.Genre" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AbookModel.Reader" Width="1.5" PointX="3.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AbookModel.ReaderBooks" Width="1.5" PointX="8.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="AbookModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AbookModel.AdminPanel" Width="1.5" PointX="5.75" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="AbookModel.FK_AuthorBooks_Author" ManuallyRouted="false" />
+        <AssociationConnector Association="AbookModel.FK_Book_Author" ManuallyRouted="false" />
+        <AssociationConnector Association="AbookModel.FK_AuthorBooks_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="AbookModel.FK_Book_Genre" ManuallyRouted="false" />
+        <AssociationConnector Association="AbookModel.FK_Book_Reader" ManuallyRouted="false" />
+        <AssociationConnector Association="AbookModel.FK_ReaderBooks_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="AbookModel.FK_ReaderBooks_Reader" ManuallyRouted="false" />
+        <AssociationConnector Association="AbookModel.BookAuthor" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
